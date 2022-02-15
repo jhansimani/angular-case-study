@@ -1,0 +1,118 @@
+.wrapper {
+  display: grid;
+  row-gap: 4.8rem;
+  height: 100%;
+}
+.header {
+  /* padding: 3.2rem 0; */
+  justify-content: end;
+  gap: 2.4rem;
+  padding-top: 4.8rem;
+}
+img {
+  background-size: cover;
+  width: 100%;
+}
+.items-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* column-gap: 1.2rem; */
+  /* row-gap: 1.8rem; */
+}
+.listView {
+  grid-template-columns: 1fr 1fr;
+  /* column-gap: 4.8rem; */
+}
+.items-list .list-item {
+  padding: 1.2rem 2.4rem;
+  /* box-shadow: 0px 20px 30px 0 rgba(0, 0, 0, 0.07); */
+  /* border: 1px solid #e1e2e4bd; */
+  transition: all 1s;
+}
+
+.items-list .list-item:hover {
+  box-shadow: 0px 20px 30px 0 rgba(0, 0, 0, 0.07);
+  /* box-shadow: 0px 20px 30px 0 rgba(255, 0, 0, 0.07); */
+  /* border: 1px solid yellow; */
+}
+
+.view-icons {
+  background-color: #fab005;
+  border-radius: 8px;
+  display: flex;
+  width: 6.4rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.header {
+  display: flex;
+}
+.view-icon {
+  height: 3.2rem;
+  border-right: 1px solid #000;
+  padding: 0.4rem;
+}
+button {
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  /* border-right: 1px solid #000; */
+}
+.view-icon:last-child {
+  border-right: none;
+}
+.filter-btn {
+  border: 1px solid #212529;
+  height: 3.4rem;
+  padding: 0 1.2rem;
+  gap: 0.8rem;
+}
+.filter-label {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+.down-icon {
+  font-size: 3.4rem;
+}
+.drop-wrappper {
+  position: relative;
+}
+.list {
+  list-style-type: none;
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+  position: absolute;
+  border: 1px solid #212529;
+  width: 100%;
+  justify-content: center;
+  padding: 1.2rem;
+  z-index: 1000;
+}
+.drop-item {
+  font-size: 1.8rem;
+  line-height: 1.6rem;
+  /* padding: 1.2rem ; */
+  cursor: pointer;
+}
+
+.name {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  font-weight: 500;
+}
+.sub-name {
+  font-size: 1.6rem;
+  /* color: rgb(206, 199, 199); */
+  color: #535766;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.price-value {
+  font-size: 1.8rem;
+  font-weight: 400;
+}

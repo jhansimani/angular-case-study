@@ -1,0 +1,15 @@
+.count-down-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 2.4rem;
+  border: 1px solid #000;
+  padding: 2.4rem;
+  row-gap: 2.4rem;
+}
+.section-count-down {
+  padding: 4.8rem 0;
+}
+
+.count-down-wrapper div {
+  height: 50%;
+}
