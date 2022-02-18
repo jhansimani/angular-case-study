@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { CountDownTimerComponent } from './count-down-timer/count-down-timer.component';
+import { Component1Component } from './component1/component1.component';
 
 @Component({
   selector: 'app-route3',
@@ -8,7 +8,7 @@ import { CountDownTimerComponent } from './count-down-timer/count-down-timer.com
 })
 export class Route3Component implements OnInit {
   @ViewChild('timer')
-  private countDownTimerComponent!: CountDownTimerComponent;
+  private component1Cmp!: Component1Component;
   timeLimit = 0;
   isStarted!: boolean;
   pauseValues: any;
@@ -25,34 +25,25 @@ export class Route3Component implements OnInit {
   isStart(event: any) {
     this.isStarted = event;
     if (this.isStarted) {
-      this.countDownTimerComponent.start();
+      this.component1Cmp.start();
     } else {
-      this.countDownTimerComponent.pause();
+      this.component1Cmp.pause();
     }
   }
   pausedAt(event: any) {
     this.pauseValues = [...event];
-
-    console.log(event);
   }
   reset(event: any) {
     this.resetted = event;
-    // if (this.resetted) {
-    //   this.capturedValues = [];
-    //   this.pauseCount = 0;
-    //   this.startCount = 0;
-    //   this.pauseValues = [];
-    // }
-    this.countDownTimerComponent.reset();
+    this.component1Cmp.reset();
   }
   noOfPauses(event: any) {
     this.pauseCount = event;
   }
-  noOfStarts(event: any) {
+  startCounter(event: any) {
     this.startCount = event;
   }
   capturedTimeValues(event: any) {
-    console.log(event);
     this.capturedValues = [...event];
   }
 }

@@ -1,40 +1,72 @@
 .wrapper {
   display: grid;
+  padding: 2.4rem 3.2rem;
   row-gap: 4.8rem;
-  height: 100%;
+  top: 64px;
+  position: absolute;
+  bottom: 0;
+  overflow-y: scroll;
+  width: 100%;
+  background: #f7f7f7;
 }
 .header {
   /* padding: 3.2rem 0; */
   justify-content: end;
   gap: 2.4rem;
-  padding-top: 4.8rem;
+  padding-top: 1.2rem;
 }
+.image-block {
+  position: relative;
+  /* height: 150px; */
+}
+
 img {
   background-size: cover;
   width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+  overflow: hidden;
 }
 .items-list {
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* column-gap: 1.2rem; */
-  /* row-gap: 1.8rem; */
+  /* height: 100%; */
+  column-gap: 1.2rem;
+  row-gap: 1.8rem;
 }
 .listView {
   grid-template-columns: 1fr 1fr;
+  /* padding-left: 4.8rem ;
+  padding-right: 4.8rem; */
+  /* grid-column: 1 / span 2; */
   /* column-gap: 4.8rem; */
 }
+.listView img {
+  height: 350px;
+}
 .items-list .list-item {
-  padding: 1.2rem 2.4rem;
-  /* box-shadow: 0px 20px 30px 0 rgba(0, 0, 0, 0.07); */
-  /* border: 1px solid #e1e2e4bd; */
-  transition: all 1s;
+  /* padding: 1.2rem 2.4rem; */
+  box-shadow: 0px 20px 30px 10px rgba(0, 0, 0, 0.07);
+  /* border: 1px solid rgb(131, 128, 128); */
+  transition: all 0.4s;
+  /* border-radius: 10px; */
+  overflow: hidden;
+  background-color: #fff;
 }
 
+.product:hover {
+}
 .items-list .list-item:hover {
-  box-shadow: 0px 20px 30px 0 rgba(0, 0, 0, 0.07);
-  /* box-shadow: 0px 20px 30px 0 rgba(255, 0, 0, 0.07); */
-  /* border: 1px solid yellow; */
+  /* box-shadow: 0px 20px 30px 0 rgba(177, 102, 102, 0.07); */
+  box-shadow: 10px 20px 30px 10px rgba(214, 209, 209, 0.07);
+  transform: scale(1.02);
+  border-radius: 10px;
+}
+
+.items-list .list-item .product .features {
+  padding: 1.6rem 1.2rem;
 }
 
 .view-icons {
@@ -51,6 +83,7 @@ img {
 }
 .view-icon {
   height: 3.2rem;
+  font-size: 3.2rem;
   border-right: 1px solid #000;
   padding: 0.4rem;
 }
@@ -78,6 +111,12 @@ button {
 .down-icon {
   font-size: 3.4rem;
 }
+
+.wish-list-icons {
+  stroke: #535766;
+  stroke-width: 30;
+  font-size: 2.4rem;
+}
 .drop-wrappper {
   position: relative;
 }
@@ -100,10 +139,23 @@ button {
   cursor: pointer;
 }
 
-.name {
-  font-size: 1.8rem;
+.name-container {
+  font-size: 1.6rem;
   line-height: 3.2rem;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+.name {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
 }
 .sub-name {
   font-size: 1.6rem;
@@ -111,8 +163,32 @@ button {
   color: #535766;
   font-weight: 400;
   line-height: 2.4rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .price-value {
   font-size: 1.8rem;
   font-weight: 400;
+}
+
+@media (max-width: 58em) {
+  /* .text-box {
+    padding: 3.2rem 2.4rem;
+  } */
+  .items-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 44em) {
+  .listView {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 34em) {
+  .items-list {
+    grid-template-columns: 1fr;
+  }
 }
