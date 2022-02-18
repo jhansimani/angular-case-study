@@ -1,7 +1,4 @@
 .timer-wrapper {
-  /* border: 2px solid #000; */
-  /* padding: 3.2rem; */
-  /* height: 250px; */
 }
 .timer-form {
   display: grid;
@@ -46,6 +43,9 @@ input:hover {
 }
 .btn:first-child {
   margin-right: 2.4rem;
+}
+.btn.disabled {
+  cursor: not-allowed;
 }
 label {
   font-weight: 400;

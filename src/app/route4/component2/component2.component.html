@@ -1,5 +1,9 @@
 <div class="timer-wrapper">
-  <form class="timer-form" #timerForm="ngForm">
+  <form
+    class="timer-form"
+    #timerForm="ngForm"
+    (ngSubmit)="timerForm.form.valid && startPause()"
+  >
     <label for="limit">Enter Time Limit</label>
     <input
       type="number"
@@ -12,10 +16,21 @@
       appDigitOnly
     />
     <div class="btn-wrapper">
-      <button class="btn start-pause" (click)="startPause()">
+      <button
+        class="btn start-pause"
+        [disabled]="!value"
+        [ngClass]="{ disabled: !timerForm.form.valid }"
+      >
         Start/pause
       </button>
-      <button class="btn reset" (click)="resetTimer()">reset</button>
+      <button
+        class="btn reset"
+        (click)="resetTimer()"
+        [disabled]="!value"
+        [ngClass]="{ disabled: !timerForm.form.valid }"
+      >
+        reset
+      </button>
     </div>
   </form>
   <ul class="pause-list">

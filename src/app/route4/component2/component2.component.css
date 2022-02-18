@@ -64,6 +64,9 @@ label {
   padding-top: 2.4rem;
   color: #ffe066;
 }
+.btn.disabled {
+  cursor: not-allowed;
+}
 .pause-list li {
   font-size: 1.6rem;
   line-height: 2.4rem;

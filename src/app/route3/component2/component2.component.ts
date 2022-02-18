@@ -9,6 +9,9 @@ import { Component1Component } from '../component1/component1.component';
 export class Component2Component implements OnInit {
   timerForm: any;
   @Input() value: any;
+  
+
+
   @Output() limitValue = new EventEmitter();
   @Output() isStarted = new EventEmitter();
   @Output() isResetted = new EventEmitter();
