@@ -166,6 +166,7 @@ button {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  text-transform: capitalize;
 }
 .price-value {
   font-size: 1.8rem;

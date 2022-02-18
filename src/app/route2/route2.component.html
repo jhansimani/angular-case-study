@@ -21,15 +21,18 @@
     [ngClass]="{ listView: !isGrid }"
     *ngIf="!isLoading && items.length > 0"
   >
-    <li class="list-item" *ngFor="let item of items | sort: order:price">
+    <li
+      class="list-item"
+      *ngFor="let item of items | sort: order:price:'brand'"
+    >
       <div class="product">
         <div class="image-block">
-          <img src="{{ item.image }}" [alt]="item.name" />
+          <img src="{{ item.image }}" [alt]="item.subName" />
         </div>
 
         <div class="features">
           <p class="name-container">
-            <span class="name">{{ item.name }}</span>
+            <span class="name">{{ item.brand }}</span>
             <span
               ><i class="fa-thin fa-heart"></i>
               <ion-icon name="heart-outline" class="wish-list-icons"></ion-icon>
