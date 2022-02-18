@@ -4,10 +4,9 @@ lds-ring {
   width: 80px;
   height: 80px;
   position: fixed;
-  top: 30vh;
-  left: 20vw;
   width: 60vw;
   padding: 16px;
+  align-items: center;
   z-index: 100;
 }
 .lds-ring div {
@@ -16,11 +15,15 @@ lds-ring {
   position: absolute;
   width: 64px;
   height: 64px;
+  z-index: 250;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
   margin: 8px;
-  border: 8px solid red;
+  border: 8px solid #ffd43b;
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: red transparent transparent transparent;
+  border-color: #FFD43B transparent transparent transparent;
 }
 .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;
@@ -41,10 +44,10 @@ lds-ring {
 }
 .backdrop {
   position: fixed;
-  top: 0;
+  top: 6.4rem;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(255, 255, 255, 1);
   z-index: 50;
 }
